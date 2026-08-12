@@ -1,0 +1,252 @@
+<!-- Header -->
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-xl mb-xl">
+    <div>
+        <h2 class="text-on-surface-variant font-label-caps uppercase mb-xs">Dashboard Overview</h2>
+        <h1 class="text-display-lg font-display-lg text-primary">Good morning, User</h1>
+    </div>
+    <div class="flex items-center gap-md">
+        <button class="p-sm rounded-full text-on-surface-variant hover:bg-surface-container-low transition-colors">
+            <span class="material-symbols-outlined">notifications</span>
+        </button>
+        <div class="p-sm rounded-full border border-outline-variant overflow-hidden">
+            <span class="material-symbols-outlined">person</span>
+        </div>
+    </div>
+</header>
+<!-- KPI Bento Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg mb-xl">
+    <!-- Total Balance Card -->
+    <section
+        class="bg-surface-container-lowest p-xl rounded-xl shadow-[0_4px_6px_rgba(0,0,0,0.05)] border border-outline-variant">
+        <p class="text-on-surface-variant font-label-caps uppercase mb-sm">Total Balance</p>
+        <h3 class="text-display-lg font-display-lg text-primary">$12,450.00</h3>
+        <div class="mt-md flex items-center gap-xs text-secondary">
+            <span class="material-symbols-outlined text-body-md">trending_up</span>
+            <span class="text-label-mono font-label-mono">+2.4% from last month</span>
+        </div>
+    </section>
+    <!-- Monthly Spending Progress -->
+    <section
+        class="bg-surface-container-lowest p-xl rounded-xl shadow-[0_4px_6px_rgba(0,0,0,0.05)] border border-outline-variant">
+        <div class="flex justify-between items-start mb-sm">
+            <p class="text-on-surface-variant font-label-caps uppercase">Monthly Spending</p>
+            <span class="text-label-mono font-label-mono text-on-surface-variant">$3,200 / $4,500</span>
+        </div>
+        <div class="h-2 w-full bg-surface-container rounded-full overflow-hidden mb-md">
+            <div class="h-full bg-secondary rounded-full" style="width: 71%"></div>
+        </div>
+        <p class="text-body-md text-on-surface-variant">71% of budget utilized</p>
+    </section>
+    <!-- Savings Goal -->
+    <section
+        class="bg-surface-container-lowest p-xl rounded-xl shadow-[0_4px_6px_rgba(0,0,0,0.05)] border border-outline-variant relative overflow-hidden">
+        <div class="relative z-10">
+            <p class="text-on-surface-variant font-label-caps uppercase mb-sm">Savings Goal</p>
+            <h3 class="text-display-lg font-display-lg text-primary">85%</h3>
+            <p class="text-body-md text-on-surface-variant">Tier: Alpha Plus</p>
+        </div>
+        <!-- Subtle visual accent -->
+        <div class="absolute -right-4 -bottom-4 opacity-5">
+            <span class="material-symbols-outlined text-[120px]">savings</span>
+        </div>
+    </section>
+</div>
+<!-- Quick Actions Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md mb-xl">
+    <button
+        [routerLink]="['/dashboard/add-expense']"
+        class="flex flex-col items-center justify-center p-lg bg-surface-container-lowest rounded-lg border border-outline-variant hover:border-secondary transition-all group">
+        <span
+            class="material-symbols-outlined text-secondary mb-sm group-hover:scale-110 transition-transform">post_add</span>
+        <span class="text-label-caps uppercase font-bold text-primary">Add Expense</span>
+    </button>
+    <button
+        class="flex flex-col items-center justify-center p-lg bg-surface-container-lowest rounded-lg border border-outline-variant hover:border-secondary transition-all group">
+        <span
+            class="material-symbols-outlined text-secondary mb-sm group-hover:scale-110 transition-transform">receipt_long</span>
+        <span class="text-label-caps uppercase font-bold text-primary">Split Bill</span>
+    </button>
+    <button
+        class="flex flex-col items-center justify-center p-lg bg-surface-container-lowest rounded-lg border border-outline-variant hover:border-secondary transition-all group">
+        <span
+            class="material-symbols-outlined text-secondary mb-sm group-hover:scale-110 transition-transform">history</span>
+        <span class="text-label-caps uppercase font-bold text-primary">EMI Tracker</span>
+    </button>
+    <button
+        class="flex flex-col items-center justify-center p-lg bg-surface-container-lowest rounded-lg border border-outline-variant hover:border-secondary transition-all group">
+        <span
+            class="material-symbols-outlined text-secondary mb-sm group-hover:scale-110 transition-transform">query_stats</span>
+        <span class="text-label-caps uppercase font-bold text-primary">Analytics</span>
+    </button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+    <!-- Left Side: Transactions and EMI -->
+    <div class="lg:col-span-8 space-y-xl">
+        <!-- Recent Transactions -->
+        <section class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden">
+            <div class="px-xl py-lg border-b border-outline-variant flex justify-between items-center">
+                <h3 class="font-headline-sm text-primary">Recent Transactions</h3>
+                <button class="text-secondary text-label-caps uppercase font-bold hover:underline">View
+                    All</button>
+            </div>
+            <div class="divide-y divide-outline-variant">
+                <!-- Item 1 -->
+                <div
+                    class="px-xl py-md flex items-center justify-between hover:bg-surface transition-colors cursor-pointer">
+                    <div class="flex items-center gap-md">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-primary">Premium Tech Store</p>
+                            <p class="text-label-caps text-on-surface-variant">Electronics • Today</p>
+                        </div>
+                    </div>
+                    <span class="font-headline-sm text-error">-$1,299.00</span>
+                </div>
+                <!-- Item 2 -->
+                <div
+                    class="px-xl py-md flex items-center justify-between hover:bg-surface transition-colors cursor-pointer">
+                    <div class="flex items-center gap-md">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-primary">Reimbursement: Travel</p>
+                            <p class="text-label-caps text-on-surface-variant">Income • Yesterday</p>
+                        </div>
+                    </div>
+                    <span class="font-headline-sm text-secondary">+$450.00</span>
+                </div>
+                <!-- Item 3 -->
+                <div
+                    class="px-xl py-md flex items-center justify-between hover:bg-surface transition-colors cursor-pointer">
+                    <div class="flex items-center gap-md">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+                            <span class="material-symbols-outlined">restaurant</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-primary">The Artisan Cafe</p>
+                            <p class="text-label-caps text-on-surface-variant">Dining • 2 days ago</p>
+                        </div>
+                    </div>
+                    <span class="font-headline-sm text-error">-$45.20</span>
+                </div>
+            </div>
+        </section>
+        <!-- Active EMIs -->
+        <section>
+            <h3 class="font-headline-sm text-primary mb-md px-xs">Active EMIs</h3>
+            <div class="flex overflow-x-auto gap-md scrollbar-hide pb-md">
+                <article
+                    class="flex-shrink-0 w-72 bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm">
+                    <div class="flex justify-between items-start mb-md">
+                        <span class="material-symbols-outlined text-secondary">laptop_mac</span>
+                        <span
+                            class="bg-secondary-container text-on-secondary-container text-label-caps px-sm py-xs rounded">3
+                            / 12</span>
+                    </div>
+                    <h4 class="font-bold text-primary">MacBook Pro M3</h4>
+                    <p class="text-headline-sm font-headline-sm text-primary my-sm">$250.00 <span
+                            class="text-body-md font-normal text-on-surface-variant">/ mo</span></p>
+                    <div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+                        <div class="h-full bg-secondary" style="width: 25%"></div>
+                    </div>
+                </article>
+                <article
+                    class="flex-shrink-0 w-72 bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm">
+                    <div class="flex justify-between items-start mb-md">
+                        <span class="material-symbols-outlined text-secondary">home</span>
+                        <span
+                            class="bg-secondary-container text-on-secondary-container text-label-caps px-sm py-xs rounded">14
+                            / 60</span>
+                    </div>
+                    <h4 class="font-bold text-primary">Furniture Set Loan</h4>
+                    <p class="text-headline-sm font-headline-sm text-primary my-sm">$112.50 <span
+                            class="text-body-md font-normal text-on-surface-variant">/ mo</span></p>
+                    <div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+                        <div class="h-full bg-secondary" style="width: 23%"></div>
+                    </div>
+                </article>
+                <article
+                    class="flex-shrink-0 w-72 bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm">
+                    <div class="flex justify-between items-start mb-md">
+                        <span class="material-symbols-outlined text-secondary">directions_car</span>
+                        <span
+                            class="bg-secondary-container text-on-secondary-container text-label-caps px-sm py-xs rounded">48
+                            / 60</span>
+                    </div>
+                    <h4 class="font-bold text-primary">Tesla Model 3</h4>
+                    <p class="text-headline-sm font-headline-sm text-primary my-sm">$640.00 <span
+                            class="text-body-md font-normal text-on-surface-variant">/ mo</span></p>
+                    <div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+                        <div class="h-full bg-secondary" style="width: 80%"></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+    <!-- Right Side: Group Splits & Stats -->
+    <div class="lg:col-span-4 space-y-xl">
+        <!-- Group Splits Summary -->
+        <section class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm">
+            <div class="px-xl py-lg border-b border-outline-variant">
+                <h3 class="font-headline-sm text-primary">Group Splits</h3>
+            </div>
+            <div class="p-xl space-y-lg">
+                <div class="grid grid-cols-2 gap-md">
+                    <div class="p-md bg-secondary-container/20 rounded-lg">
+                        <p class="text-label-caps text-on-secondary-container">Owed to you</p>
+                        <p class="text-headline-sm text-secondary font-bold">$1,240.00</p>
+                    </div>
+                    <div class="p-md bg-error-container/20 rounded-lg">
+                        <p class="text-label-caps text-on-error-container">You owe</p>
+                        <p class="text-headline-sm text-error font-bold">$320.00</p>
+                    </div>
+                </div>
+                <div class="space-y-md">
+                    <h4 class="text-label-caps uppercase text-on-surface-variant">Active Splits</h4>
+                    <div class="flex items-center gap-md">
+                        <img alt="Sarah" class="w-8 h-8 rounded-full border border-outline-variant"
+                            data-alt="A portrait of a young professional woman with a bright smile, set against a blurred background of a modern library or coworking space. The lighting is soft and airy, highlighting her warm skin tones. The aesthetic is clean and contemporary, fitting for a user-friendly financial application's social features."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3kkY-WeE5ULb1S9kFYTPsTwJgjyubyPyOxi-ij6vHidne7BIiPg80LWKnSRvHo5PH0TmbUPX4zCQxJYXALQ0BcSTZIMvK4c5NtE6dG_HScbk7yxJoYSwLgIezH9DSZzl4IQiO6MTgBVBnOhOQiJGOmZm9AR-CdtqG_wbCBif6TJgbJPx0RAA1Ev2FlRVBKZ9jOyUf4vWnF2McqP-QiYYAC15hreeXYwXFeVMhj8uxheM8Dsx5vHbZw9BtZW6L8t91lnRQBI38J3Q" />
+                        <div class="flex-1">
+                            <p class="text-body-md font-bold">Sarah's Birthday Dinner</p>
+                            <p class="text-label-mono text-on-surface-variant">Owes you $42.00</p>
+                        </div>
+                        <button class="text-secondary material-symbols-outlined">send</button>
+                    </div>
+                    <div class="flex items-center gap-md">
+                        <img alt="David" class="w-8 h-8 rounded-full border border-outline-variant"
+                            data-alt="A portrait of a male professional with a calm and confident expression, wearing a navy blue polo shirt. The environment is an upscale, minimalist urban apartment with soft morning light streaming through. The color palette is neutral and sophisticated, enhancing the premium feel of the financial dashboard."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEuuk2lRImyMRpjFjdjtTQL4vRaLnNohJqWTKMdri_PXElQGwHl-ucPy6Czbgbd_I-viV0kFxy7y7N4xORRi3yXxpl1FG468pmqN0o1jlcNTIS5tHwu7VWP85QfmOFw8V9AvOqguActHV4dEApOHR0wH747MIEWqYYy6kfD8gZ_KwzXcj1RP4i4OncZOJxa7keYGphjjIdFjMC8gNlF9x1w_g2fe3MYmnBpJAEEJXiiw44DlyV-v7CIwwZWO6gIvAdhpXNkwuVSyE" />
+                        <div class="flex-1">
+                            <p class="text-body-md font-bold">Utility Bills - Oct</p>
+                            <p class="text-label-mono text-on-surface-variant text-error">You owe $85.50</p>
+                        </div>
+                        <button class="text-error material-symbols-outlined">account_balance_wallet</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Visualization Card -->
+        <section
+            class="bg-primary-container text-on-primary-container p-xl rounded-xl shadow-lg relative overflow-hidden group cursor-pointer">
+            <h3 class="font-headline-sm mb-sm relative z-10">Financial Intelligence</h3>
+            <p class="text-body-md mb-lg opacity-80 relative z-10">Your spending in 'Dining' has increased by
+                12% this week. Consider reviewing your budget.</p>
+            <button
+                class="bg-secondary-container text-on-secondary-container px-lg py-md rounded-lg font-bold text-label-caps uppercase relative z-10 group-hover:bg-white transition-colors">Analyze
+                Trends</button>
+            <!-- Decorative Background Elements -->
+            <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-3xl -mr-16 -mt-16">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-24 h-24 bg-tertiary-container/30 rounded-full blur-2xl -ml-12 -mb-12">
+            </div>
+        </section>
+    </div>
+</div>

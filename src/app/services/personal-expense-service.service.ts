@@ -20,8 +20,8 @@ export class PersonalExpenseService {
     );
   }
 
-  getExpenseList():Observable<PersonalExpense[]>{
-    return this.http.get<PersonalExpense[]>(this.API_BASE_URL+'/expense/get-all-expenses')
+  getExpenseList():Observable<any>{
+    return this.http.get(this.API_BASE_URL+'/expense/get-all-expenses')
     .pipe(
       tap((data)=> console.log('Data Fetched: ' + JSON.stringify(data))),
       catchError(this.handleError)

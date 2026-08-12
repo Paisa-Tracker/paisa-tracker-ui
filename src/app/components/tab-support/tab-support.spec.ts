@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LandingScreen } from './landing-screen';
+import { TabSupport } from './tab-support';
 
-describe('LandingScreen', () => {
-  let component: LandingScreen;
-  let fixture: ComponentFixture<LandingScreen>;
+describe('TabSupport', () => {
+  let component: TabSupport;
+  let fixture: ComponentFixture<TabSupport>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LandingScreen],
+      imports: [TabSupport],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LandingScreen);
+    fixture = TestBed.createComponent(TabSupport);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

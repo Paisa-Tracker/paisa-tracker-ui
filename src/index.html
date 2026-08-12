@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>PaisaTrackerUi</title>
-  <base href="/">
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link
+    <meta charset="utf-8">
+    <title>PaisaTrackerUi</title>
+    <base href="/">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <link
@@ -16,21 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap"
         rel="stylesheet" />
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
-  <script id="tailwind-config">
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -124,43 +111,9 @@
         }
     </script>
 </head>
+
 <body>
-  <app-root></app-root>
-  <script>
-        // Simple Micro-interactions
-        document.querySelectorAll('article, section, button').forEach(el => {
-            el.addEventListener('mousedown', () => {
-                el.classList.add('scale-95');
-            });
-            el.addEventListener('mouseup', () => {
-                el.classList.remove('scale-95');
-            });
-            el.addEventListener('mouseleave', () => {
-                el.classList.remove('scale-95');
-            });
-        });
-    </script>
-    <script>
-  // Micro-interaction for the password visibility toggle
-  const toggleBtn = document.querySelector('button[type="button"]');
-  const passwordInput = document.getElementById('password');
-  const visibilityIcon = toggleBtn ? toggleBtn.querySelector('.material-symbols-outlined') : null;
-
-  if (toggleBtn && passwordInput) {
-    toggleBtn.addEventListener('click', () => {
-      const isPassword = passwordInput.type === 'password';
-      passwordInput.type = isPassword ? 'text' : 'password';
-      visibilityIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
-    });
-  }
-
-  // Simple button active state visual feedback refinement
-  const buttons = document.querySelectorAll('button');
-  buttons.forEach(btn => {
-    btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
-    btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
-    btn.addEventListener('mouseleave', () => btn.classList.remove('scale-95'));
-  });
-</script>
+    <app-root></app-root>
 </body>
+
 </html>

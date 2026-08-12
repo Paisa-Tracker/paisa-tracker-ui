@@ -1,3 +1,4 @@
+<app-header></app-header>
 <main class="flex-grow flex items-center justify-center px-margin-mobile md:px-0 pb-10 pt-10">
   <div
     class="grid grid-cols-1 md:grid-cols-12 max-w-[1100px] w-full bg-white dark:bg-surface-container-lowest rounded-xl overflow-hidden login-card-shadow border border-outline-variant">
@@ -31,16 +32,16 @@
         <header class="mb-xl">
           <h2 class="font-headline-md text-headline-md text-primary mb-xs">
             @if(!showRegister){
-              Sign In
+            Sign In
             } @else {
-              Register Yourself
+            Register Yourself
             }
-            
+
           </h2>
           <p class="font-body-md text-on-surface-variant">Access your secure financial dashboard.</p>
         </header>
         @if (!showRegister) {
-          <form class="space-y-lg pb-10" [formGroup]="loginForm">
+        <form class="space-y-lg pb-10" [formGroup]="loginForm">
           <!-- Username Field -->
           <div class="space-y-xs">
             <label class="font-label-caps text-label-caps text-on-surface-variant block" for="username">USERNAME</label>
@@ -51,16 +52,17 @@
                 class="w-full h-12 pl-11 pr-md border border-outline-variant rounded-lg font-body-md focus:ring-2 focus:ring-on-tertiary-container focus:ring-opacity-20 focus:border-primary transition-all bg-surface-container-lowest outline-none"
                 id="username" name="username" placeholder="Enter your username" type="text" />
             </div>
-            <div *ngIf="loginForm.controls['username'].errors && loginForm.controls['username'].touched">
-              <p *ngIf="loginForm.controls['username'].errors?.['required']" id="usernameError"
-                class="mt-2 text-xs text-red-600 dark:text-red-400">
-                <span class="font-medium">Oops!</span> Field is required.
-              </p>
-              <p *ngIf="loginForm.controls['username'].errors?.['pattern']" id="usernameError"
-                class="mt-2 text-xs text-red-600 dark:text-red-400">
-                <span class="font-medium">Oops!</span> Letters, Numbers, _ and . is allowed
-              </p>
-            </div>
+            @if (usernameL?.invalid && (usernameL?.touched || usernameL?.dirty)) {
+            @if (usernameL?.hasError('required')) {
+            <p class="mt-2 text-xs text-red-600 dark:text-red-400">
+              <span class="font-medium">Oops!</span> Field is required.
+            </p>
+            } @else {
+            <p class="mt-2 text-xs text-red-600 dark:text-red-400">
+              <span class="font-medium">Oops!</span> invalid username
+            </p>
+            }
+            }
           </div>
           <!-- Password Field -->
           <div class="space-y-xs">
@@ -76,16 +78,17 @@
                 class="w-full h-12 pl-11 pr-11 border border-outline-variant rounded-lg font-body-md focus:ring-2 focus:ring-on-tertiary-container focus:ring-opacity-20 focus:border-primary transition-all bg-surface-container-lowest outline-none"
                 id="password" name="password" placeholder="••••••••" type="password" />
             </div>
-            <div *ngIf="loginForm.controls['password'].errors && loginForm.controls['password'].touched">
-              <p *ngIf="loginForm.controls['password'].errors?.['required']" id="passwordError"
-                class="mt-2 text-xs text-red-600 dark:text-red-400">
-                <span class="font-medium">Oops!</span> Field is required.
-              </p>
-            </div>
+            @if (passwordL?.invalid && (passwordL?.touched || passwordL?.dirty)) {
+            @if (passwordL?.hasError('required')) {
+            <p class="mt-2 text-xs text-red-600 dark:text-red-400">
+              <span class="font-medium">Oops!</span> Field is required.
+            </p>
+            }
+            }
           </div>
         </form>
         } @else {
-          <form class="space-y-lg pb-10" [formGroup]="registerForm">
+        <form class="space-y-lg pb-10" [formGroup]="registerForm">
           <!-- Username Field -->
           <div class="space-y-xs">
             <label class="font-label-caps text-label-caps text-on-surface-variant block" for="username">USERNAME</label>
@@ -179,6 +182,11 @@
           <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
         </button>
         }
+        @if (errorMsg) {
+        <div class="mt-2 text-xs text-red-600 dark:text-red-400">
+          <span class="font-medium">Oops!</span>{{ errorMsg }}
+        </div>
+        }
 
         <footer class="mt-xl pt-lg border-t border-outline-variant text-center">
           @if (!showRegister) {
@@ -201,3 +209,4 @@
     </div>
   </div>
 </main>
+<app-footer></app-footer>

@@ -1,0 +1,186 @@
+<main class="mt-12 min-h-screen">
+    <div class=" mx-auto space-y-xl">
+        <!-- Profile Header -->
+        <section
+            class="bg-surface-container-lowest p-lg rounded-xl card-shadow flex flex-col md:flex-row items-center gap-lg">
+            <div class="relative">
+                <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-background ring-2 ring-secondary/10">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A high-quality, professional headshot of a businessman with short, styled hair and a friendly but professional expression. The background is a blurred modern office with soft daylight. The image is crisp, with a cool color grade focusing on navy and slate tones to match the financial brand's corporate minimalist identity."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6zQooACkJkMXgDr35VkbZ0TMWrGBWcQTMP8ZAwdVCk394Xtl2FU44WqEfPbXGFqNCgJWuqhNbCr_anLkzBoIWVjKsvrZKA935HyjNEklNDM-444qLx6OPxm8atDycIj4BaIWPJof1QOXjk3oqvoGhxjeoRgqOc4cnKkwelUBMjsy9FdgR65PbvVSzsNCWnHo4vWJCUEsoHrp6S52P8JhZrTXo41nNNAgUxB_OpffV4uSM_N7cjRqUB1jdvCSRJsWjDcmvCYt6X_0" />
+                </div>
+                <div class="absolute bottom-1 right-1 bg-secondary text-white p-1 rounded-full border-2 border-white">
+                    <span class="material-symbols-outlined text-[16px]"
+                        style="font-variation-settings: 'FILL' 1;">verified</span>
+                </div>
+            </div>
+            <div class="flex-1 text-center md:text-left">
+                <div class="flex flex-col md:flex-row md:items-center gap-2 mb-1">
+                    <h2 class="font-display-lg text-display-lg">Alex Sterling</h2>
+                    <span
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-secondary font-label-caps text-label-caps w-fit mx-auto md:mx-0">
+                        Premium Member
+                    </span>
+                </div>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">alex.s@fiscalprecision.com</p>
+                <p class="font-body-md text-body-md text-outline mt-1">Member since October 2022</p>
+            </div>
+            <div class="flex gap-3">
+                <button
+                    class="px-6 py-3 bg-secondary text-white rounded-lg font-body-md font-bold hover:opacity-90 transition-all flex items-center gap-2 min-h-[48px]">
+                    <span class="material-symbols-outlined">edit</span>
+                    Edit Profile
+                </button>
+            </div>
+        </section>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+            <!-- Personal Information -->
+            <div class="lg:col-span-7 space-y-xl">
+                <section class="bg-surface-container-lowest rounded-xl card-shadow overflow-hidden">
+                    <div class="px-lg py-md border-b border-outline-variant flex justify-between items-center">
+                        <h3 class="font-headline-sm text-headline-sm">Personal Information</h3>
+                        <button class="text-secondary font-body-md font-bold hover:underline">Edit All</button>
+                    </div>
+                    <div class="p-lg space-y-6">
+                        <div class="flex justify-between items-center group">
+                            <div>
+                                <p class="font-label-caps text-label-caps text-outline mb-1">FULL NAME</p>
+                                <p class="font-body-lg text-body-lg font-semibold">Alex Sterling</p>
+                            </div>
+                            <button
+                                class="p-2 opacity-0 group-hover:opacity-100 text-outline hover:text-secondary transition-all">
+                                <span class="material-symbols-outlined">edit</span>
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center group">
+                            <div>
+                                <p class="font-label-caps text-label-caps text-outline mb-1">EMAIL ADDRESS</p>
+                                <p class="font-body-lg text-body-lg font-semibold">alex.s@fiscalprecision.com</p>
+                            </div>
+                            <button
+                                class="p-2 opacity-0 group-hover:opacity-100 text-outline hover:text-secondary transition-all">
+                                <span class="material-symbols-outlined">edit</span>
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center group">
+                            <div>
+                                <p class="font-label-caps text-label-caps text-outline mb-1">PHONE NUMBER</p>
+                                <p class="font-body-lg text-body-lg font-semibold">+1 (555) 012-3456</p>
+                            </div>
+                            <button
+                                class="p-2 opacity-0 group-hover:opacity-100 text-outline hover:text-secondary transition-all">
+                                <span class="material-symbols-outlined">edit</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <!-- Preferences Section -->
+                <section class="bg-surface-container-lowest rounded-xl card-shadow overflow-hidden">
+                    <div class="px-lg py-md border-b border-outline-variant">
+                        <h3 class="font-headline-sm text-headline-sm">Preferences</h3>
+                    </div>
+                    <div class="p-lg grid grid-cols-1 md:grid-cols-2 gap-lg">
+                        <div class="space-y-1">
+                            <label class="font-label-caps text-label-caps text-outline">CURRENCY</label>
+                            <select
+                                class="w-full mt-1 border-outline-variant rounded-lg font-body-md focus:border-secondary focus:ring-2 focus:ring-secondary/20">
+                                <option selected="">USD ($) - US Dollar</option>
+                                <option>EUR (€) - Euro</option>
+                                <option>GBP (£) - British Pound</option>
+                            </select>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="font-label-caps text-label-caps text-outline">LANGUAGE</label>
+                            <select
+                                class="w-full mt-1 border-outline-variant rounded-lg font-body-md focus:border-secondary focus:ring-2 focus:ring-secondary/20">
+                                <option selected="">English (US)</option>
+                                <option>Spanish (ES)</option>
+                                <option>French (FR)</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2 pt-4">
+                            <p class="font-label-caps text-label-caps text-outline mb-4">NOTIFICATIONS</p>
+                            <div class="space-y-4">
+                                <label class="flex items-center justify-between cursor-pointer group">
+                                    <span class="font-body-md text-body-md">Push Notifications</span>
+                                    <input checked=""
+                                        class="w-11 h-6 bg-surface-container-high rounded-full border-none text-secondary focus:ring-0 checked:bg-secondary relative appearance-none after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all checked:after:translate-x-5"
+                                        type="checkbox" />
+                                </label>
+                                <label class="flex items-center justify-between cursor-pointer group">
+                                    <span class="font-body-md text-body-md">Email Digests</span>
+                                    <input checked=""
+                                        class="w-11 h-6 bg-surface-container-high rounded-full border-none text-secondary focus:ring-0 checked:bg-secondary relative appearance-none after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all checked:after:translate-x-5"
+                                        type="checkbox" />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Security & Privacy -->
+            <div class="lg:col-span-5 space-y-xl">
+                <section class="bg-surface-container-lowest rounded-xl card-shadow overflow-hidden">
+                    <div class="px-lg py-md border-b border-outline-variant">
+                        <h3 class="font-headline-sm text-headline-sm">Security &amp; Privacy</h3>
+                    </div>
+                    <div class="p-lg space-y-6">
+                        <div class="p-4 rounded-xl border border-outline-variant bg-surface-container-low">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-secondary">verified_user</span>
+                                    <span class="font-body-md font-bold">Two-Factor Auth</span>
+                                </div>
+                                <span
+                                    class="px-2 py-0.5 rounded-full bg-secondary-container text-secondary text-[10px] font-bold">ACTIVE</span>
+                            </div>
+                            <p class="font-body-md text-on-surface-variant text-[13px]">Enhanced security is enabled on
+                                your account via SMS and Email verification.</p>
+                            <button
+                                class="mt-4 text-secondary font-body-md font-bold text-[13px] hover:underline">Manage
+                                2FA Settings</button>
+                        </div>
+                        <button
+                            class="w-full flex items-center justify-between p-4 rounded-xl border border-outline-variant hover:bg-surface-container transition-colors group">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-on-surface-variant">lock_reset</span>
+                                <span class="font-body-md text-body-md">Change Password</span>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+                        </button>
+                        <button
+                            class="w-full flex items-center justify-between p-4 rounded-xl border border-outline-variant hover:bg-surface-container transition-colors group">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-on-surface-variant">devices</span>
+                                <span class="font-body-md text-body-md">Active Sessions</span>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+                        </button>
+                    </div>
+                </section>
+                <!-- Account Health / Support -->
+                <section class="bg-primary-container text-white p-lg rounded-xl flex flex-col gap-4">
+                    <div>
+                        <h4 class="font-headline-sm text-headline-sm mb-1 text-white">Need assistance?</h4>
+                        <p class="font-body-md text-on-primary-container">Our enterprise support team is available 24/7
+                            for premium members.</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a class="w-full py-3 text-center bg-white/10 hover:bg-white/20 rounded-lg font-body-md transition-colors border border-white/20"
+                            href="#">Contact Priority Support</a>
+                        <a class="w-full py-3 text-center text-white/60 hover:text-white font-body-md transition-colors"
+                            href="#">Download Security Audit Log</a>
+                    </div>
+                </section>
+                <section class="p-lg">
+                    <button
+                        class="w-full py-3 text-error font-body-md font-bold border border-error/20 hover:bg-error/5 rounded-lg transition-colors">
+                        Deactivate Account
+                    </button>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>

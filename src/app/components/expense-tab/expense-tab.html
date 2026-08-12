@@ -1,0 +1,170 @@
+<main class="pt-12 pb-xl">
+    <!-- Header Actions -->
+    <div class="flex justify-between items-end mb-xl">
+        <div>
+            <h1 class="font-display-lg text-display-lg text-primary mb-xs">All Expenses</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">Manage and review your corporate spending
+                history.</p>
+        </div>
+        <button
+            [routerLink]="['/dashboard/add-expense']"
+            class="bg-secondary text-on-secondary px-lg py-md rounded-lg font-body-md font-bold flex items-center gap-sm shadow-sm hover:shadow-md transition-shadow">
+            <span class="material-symbols-outlined">add</span>
+            Add Expense
+        </button>
+    </div>
+    <!-- Advanced Filters -->
+    <section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg mb-xl shadow-sm">
+        <div class="grid grid-cols-4 gap-lg items-end">
+            <div class="space-y-xs">
+                <label class="font-label-caps text-label-caps text-on-surface-variant">CATEGORY</label>
+                <select
+                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-md py-2 text-body-md focus:border-secondary">
+                    <option>All Categories</option>
+                    <option>Dining</option>
+                    <option>Travel</option>
+                    <option>Utilities</option>
+                    <option>Electronics</option>
+                    <option>Rent</option>
+                </select>
+            </div>
+            <div class="space-y-xs">
+                <label class="font-label-caps text-label-caps text-on-surface-variant">DATE RANGE</label>
+                <select
+                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-md py-2 text-body-md focus:border-secondary">
+                    <option>This Month</option>
+                    <option>This Week</option>
+                    <option>Last 30 Days</option>
+                    <option>Last Quarter</option>
+                    <option>Custom Range</option>
+                </select>
+            </div>
+            <div class="space-y-xs">
+                <label class="font-label-caps text-label-caps text-on-surface-variant">STATUS</label>
+                <select
+                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-md py-2 text-body-md focus:border-secondary">
+                    <option>All Statuses</option>
+                    <option>Approved</option>
+                    <option>Pending</option>
+                    <option>Declined</option>
+                </select>
+            </div>
+            <div class="flex items-center gap-md">
+                <button
+                    class="flex-1 border border-outline text-on-surface-variant py-2 rounded-lg font-body-md hover:bg-surface-container-high transition-colors">
+                    Clear Filters
+                </button>
+                <button
+                    class="p-2 border border-outline text-on-surface-variant rounded-lg hover:bg-surface-container-high transition-colors">
+                    <span class="material-symbols-outlined">file_download</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Expense History Table -->
+    <div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm overflow-hidden">
+        <table class="w-full text-left border-collapse">
+            <thead class="bg-surface-container-low">
+                <tr>
+                    <th
+                        class="px-lg py-md font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant">
+                        DATE</th>
+                    <th
+                        class="px-lg py-md font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant">
+                        Expense Name</th>
+                    <th
+                        class="px-lg py-md font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant">
+                        CATEGORY</th>
+                    <th
+                        class="px-lg py-md font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant">
+                        TIME</th>
+                    <th
+                        class="px-lg py-md font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant">
+                        AMOUNT</th>
+                    <th
+                        class="px-lg py-md font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant text-right">
+                        ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-outline-variant">
+                @for ((expense of expenseList$ | async); track $index) {
+                    <tr class="expense-row-hover transition-colors">
+                    <td class="px-lg py-lg font-body-md text-body-md">{{ expense.createdOn | date: 'MMM-dd, yyyy' }}</td>
+                    <td class="px-lg py-lg">
+                        <div class="flex items-center gap-md">
+                            <span class="font-body-md font-bold text-on-surface">{{ expense.paidTo }}</span>
+                        </div>
+                    </td>
+                    <td class="px-lg py-lg">
+                        <span
+                            class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-md py-1 rounded-full font-label-caps text-label-caps">{{ expense.category }}</span>
+                    </td>
+                    <td class="px-lg py-lg font-body-md text-on-surface-variant">{{ expense.createdOn | date: 'shortTime' }}</td>
+                    <td class="px-lg py-lg font-headline-sm text-headline-sm text-primary">{{ expense.amount }} &#8377;</td>
+                    <td class="px-lg py-lg text-right">
+                        <div class="flex justify-end gap-sm">
+                            <button
+                                class="p-2 hover:bg-surface-container-highest rounded-lg transition-colors text-on-surface-variant">
+                                <span class="material-symbols-outlined">edit</span>
+                            </button>
+                            <button
+                                class="p-2 hover:bg-error-container hover:text-error rounded-lg transition-colors text-on-surface-variant">
+                                <span class="material-symbols-outlined">delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        <!-- Pagination Placeholder -->
+        <div
+            class="bg-surface-container-low px-lg py-md flex justify-between items-center border-t border-outline-variant">
+            <span class="font-body-md text-on-surface-variant">Showing 5 of 124 transactions</span>
+            <div class="flex gap-sm">
+                <button
+                    class="px-md py-1 border border-outline-variant rounded bg-surface text-on-surface-variant hover:bg-surface-container-high transition-colors disabled:opacity-50">Previous</button>
+                <button
+                    class="px-md py-1 border border-outline-variant rounded bg-secondary text-on-secondary font-bold">1</button>
+                <button
+                    class="px-md py-1 border border-outline-variant rounded bg-surface text-on-surface-variant hover:bg-surface-container-high transition-colors">2</button>
+                <button
+                    class="px-md py-1 border border-outline-variant rounded bg-surface text-on-surface-variant hover:bg-surface-container-high transition-colors">Next</button>
+            </div>
+        </div>
+    </div>
+    <!-- Visual Data Flourish -->
+    <div class="mt-xl grid grid-cols-1 md:grid-cols-2 gap-xl">
+        <div class="bg-surface-container-highest rounded-xl p-lg relative overflow-hidden group">
+            <div class="relative z-10">
+                <p class="font-label-caps text-label-caps text-on-surface-variant mb-xs">TOTAL SPENDING THIS MONTH</p>
+                <h3 class="font-display-lg text-display-lg text-primary">$4,282.95</h3>
+                <div class="mt-md flex items-center gap-xs text-secondary font-bold font-body-md">
+                    <span class="material-symbols-outlined">trending_up</span>
+                    <span>12.4% vs last month</span>
+                </div>
+            </div>
+            <div
+                class="absolute right-0 bottom-0 opacity-10 transform translate-x-4 translate-y-4 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[120px]">analytics</span>
+            </div>
+        </div>
+        <div
+            class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex items-center justify-between">
+            <div class="space-y-md">
+                <p class="font-label-caps text-label-caps text-on-surface-variant">QUICK CATEGORY SPLIT</p>
+                <div class="flex items-end gap-sm h-16">
+                    <div class="w-6 bg-secondary h-[80%] rounded-t-sm" title="Rent"></div>
+                    <div class="w-6 bg-tertiary-fixed h-[40%] rounded-t-sm" title="Electronics"></div>
+                    <div class="w-6 bg-primary-fixed h-[60%] rounded-t-sm" title="Travel"></div>
+                    <div class="w-6 bg-surface-variant h-[20%] rounded-t-sm" title="Utilities"></div>
+                    <div class="w-6 bg-secondary-fixed h-[10%] rounded-t-sm" title="Dining"></div>
+                </div>
+            </div>
+            <div class="text-right">
+                <span class="material-symbols-outlined text-outline text-[48px]">pie_chart</span>
+                <p class="font-body-md text-on-surface-variant mt-xs underline cursor-pointer">View Full Report</p>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,226 @@
+<app-header></app-header>
+<main class="mt-12 max-w-[1400px] mx-auto min-h-screen">
+    <!-- Hero Section: Search & Title -->
+    <section class="flex flex-col items-center text-center py-xl space-y-lg">
+        <div class="space-y-xs">
+            <h2 class="font-display-lg text-display-lg text-primary">Help Center</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                How can we assist your financial journey today? Find expert guides, community answers, and direct
+                support.
+            </p>
+        </div>
+        <div
+            class="relative w-full max-w-3xl search-container bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm transition-all flex items-center px-lg py-sm">
+            <span class="material-symbols-outlined text-secondary mr-md text-[28px]">search</span>
+            <input
+                class="flex-grow border-none focus:ring-0 text-body-lg font-body-lg text-on-surface placeholder:text-outline/50 bg-transparent"
+                placeholder="Search for help, tutorials, or articles..." type="text" />
+            <div class="flex gap-xs">
+                <kbd
+                    class="px-sm py-xs bg-surface-container border border-outline-variant rounded font-label-mono text-label-mono text-outline">CMD</kbd>
+                <kbd
+                    class="px-sm py-xs bg-surface-container border border-outline-variant rounded font-label-mono text-label-mono text-outline">K</kbd>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Channels -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-xl mb-xl">
+        <div
+            class="glass-card p-lg rounded-xl shadow-sm flex flex-col items-center text-center space-y-md hover:translate-y-[-4px] transition-transform duration-300">
+            <div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-[32px]">mail</span>
+            </div>
+            <div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Email Support</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-sm">24h Response guaranteed for all
+                    enterprise tickets.</p>
+            </div>
+            <button
+                class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider hover:underline decoration-2 underline-offset-4">Send
+                Ticket</button>
+        </div>
+        <div
+            class="glass-card p-lg rounded-xl shadow-sm border-2 border-secondary/20 flex flex-col items-center text-center space-y-md hover:translate-y-[-4px] transition-transform duration-300 relative overflow-hidden">
+            <div class="absolute top-4 right-4 flex items-center gap-xs">
+                <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                <span class="font-label-caps text-[10px] text-secondary font-bold">LIVE</span>
+            </div>
+            <div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-[32px]">chat_bubble</span>
+            </div>
+            <div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Live Chat</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-sm">Real-time assistance with a financial
+                    specialist.</p>
+            </div>
+            <button
+                class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider hover:underline decoration-2 underline-offset-4">Start
+                Chat</button>
+        </div>
+        <div
+            class="glass-card p-lg rounded-xl shadow-sm flex flex-col items-center text-center space-y-md hover:translate-y-[-4px] transition-transform duration-300">
+            <div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-[32px]">event_available</span>
+            </div>
+            <div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Schedule a Call</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-sm">Deep-dive into your accounts with an
+                    expert.</p>
+            </div>
+            <button
+                class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider hover:underline decoration-2 underline-offset-4">Book
+                Time</button>
+        </div>
+    </section>
+    <!-- FAQ & Community Grid -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-xl mb-xl">
+        <!-- FAQ Section -->
+        <div class="lg:col-span-2 space-y-lg">
+            <div class="flex items-center justify-between border-b border-outline-variant pb-md">
+                <h3 class="font-headline-md text-headline-md text-primary">Common Questions</h3>
+                <a class="text-secondary font-label-caps text-label-caps flex items-center gap-xs hover:gap-sm transition-all"
+                    href="#">View All <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+                <div
+                    class="p-md bg-surface-container-low rounded-lg border border-outline-variant hover:bg-white hover:shadow-md transition-all cursor-pointer group">
+                    <div class="flex justify-between items-start">
+                        <span class="font-body-md text-body-md font-bold text-primary">How to add a loan?</span>
+                        <span
+                            class="material-symbols-outlined text-outline group-hover:text-secondary">help_center</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-sm line-clamp-2">Navigate to the
+                        Loans tab and select the '+' icon in the top right corner to initiate...</p>
+                </div>
+                <div
+                    class="p-md bg-surface-container-low rounded-lg border border-outline-variant hover:bg-white hover:shadow-md transition-all cursor-pointer group">
+                    <div class="flex justify-between items-start">
+                        <span class="font-body-md text-body-md font-bold text-primary">How to split a bill?</span>
+                        <span
+                            class="material-symbols-outlined text-outline group-hover:text-secondary">call_split</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-sm line-clamp-2">Open any transaction
+                        card and tap the 'Split' action to divide expenses between members...</p>
+                </div>
+                <div
+                    class="p-md bg-surface-container-low rounded-lg border border-outline-variant hover:bg-white hover:shadow-md transition-all cursor-pointer group">
+                    <div class="flex justify-between items-start">
+                        <span class="font-body-md text-body-md font-bold text-primary">Managing shared expenses</span>
+                        <span class="material-symbols-outlined text-outline group-hover:text-secondary">group</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-sm line-clamp-2">Configure shared
+                        wallets under Settings to automate distribution of household costs...</p>
+                </div>
+                <div
+                    class="p-md bg-surface-container-low rounded-lg border border-outline-variant hover:bg-white hover:shadow-md transition-all cursor-pointer group">
+                    <div class="flex justify-between items-start">
+                        <span class="font-body-md text-body-md font-bold text-primary">Exporting reports</span>
+                        <span class="material-symbols-outlined text-outline group-hover:text-secondary">download</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-sm line-clamp-2">Generate PDF, CSV,
+                        or XLSX formats directly from the Reports dashboard with custom filters...</p>
+                </div>
+            </div>
+        </div>
+        <!-- Community Section Banner -->
+        <div class="flex flex-col">
+            <div
+                class="bg-primary text-on-primary rounded-xl p-lg flex-grow flex flex-col justify-between overflow-hidden relative group">
+                <div
+                    class="absolute -right-12 -top-12 w-48 h-48 bg-secondary/20 rounded-full blur-3xl group-hover:bg-secondary/40 transition-colors">
+                </div>
+                <div class="space-y-md relative z-10">
+                    <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                        <span class="material-symbols-outlined text-secondary">forum</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md">Community Forum</h3>
+                    <p class="font-body-md text-body-md text-on-primary/70">Connect with 50k+ finance professionals.
+                        Discuss strategies, share workflows, and get tips from the community.</p>
+                </div>
+                <button
+                    class="mt-lg w-full bg-secondary text-on-secondary py-md rounded-lg font-label-caps text-label-caps hover:bg-secondary-container hover:text-on-secondary-container transition-colors relative z-10">
+                    Join Discussion
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Resource Library -->
+    <section class="space-y-lg mb-xl">
+        <div class="flex items-center justify-between border-b border-outline-variant pb-md">
+            <h3 class="font-headline-md text-headline-md text-primary">Resource Library</h3>
+            <div class="flex gap-sm">
+                <button
+                    class="p-xs bg-surface-container border border-outline-variant rounded-full text-on-surface-variant hover:bg-secondary hover:text-white transition-all">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <button
+                    class="p-xs bg-surface-container border border-outline-variant rounded-full text-on-surface-variant hover:bg-secondary hover:text-white transition-all">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-xl">
+            <!-- Article 1 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-video rounded-xl overflow-hidden mb-md border border-outline-variant relative">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="A clean, minimalist 3D rendering of financial documents, tax forms, and a calculator on a white desk. Soft daylight illumination, high-end corporate aesthetic with a navy and teal color scheme. Crisp focus on the texture of the paper and the sleek design of the digital devices."
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5M85d_Aau62yxL3IY78EUbKlJeNVKOuUmzOGkx2O6ctJFzkO3uAHyZdm-xASbIERE0zBkD3emRyixCTaPywVOMPZUWjXMZjXqILkF-KlLaAsmADYlw1On2tlfJiFviVIYI4vrwq0So2aLg2kJ00NhhdCtFvB1D31hnOJv4N3WHWKggfz5JTxLB9vK6KKHO-RZEngAXE2Q6GIUe1AjjEPV11ZqkDOYCoLCuwv3T1ySwkzmHNxM0gdMFV-cKPhCaosYG_TE2N4hYSQ')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-[48px]">menu_book</span>
+                    </div>
+                    <div
+                        class="absolute top-3 left-3 px-sm py-xs bg-white/90 backdrop-blur rounded-full font-label-caps text-[10px] text-primary">
+                        GUIDE</div>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                    Tax Laws: 2024 Updates</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-sm">A comprehensive breakdown of the
+                    latest corporate and personal tax adjustments for the upcoming fiscal year.</p>
+            </div>
+            <!-- Article 2 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-video rounded-xl overflow-hidden mb-md border border-outline-variant relative">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="An abstract visualization of investment data using glowing teal and white bar charts and line graphs floating in a deep navy digital space. Professional financial dashboard aesthetic, minimalist design, sharp lines, and soft bokeh light effects. The mood is sophisticated, technical, and forward-looking."
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6qbEUNs-7EVopO99z84jqGBeHNJdrDeqRf2YJ0IiTJlJkuk_UesVMJEXqzw8rlxoePqekLV-aNlgjW01JBLekuuWoFVJihkjl0qfgru-JhbjJRuEFbcb6LFtQYMDTQ5GAc_JqLqoxYzjL_tY0rhpC_T2KCEI0XDqrmhaJJGAZi_eK0E734LqPHHaDosGoruq6H-0g0j_15FjIbcBaOLcxd-E0NerRAdnjQunEkqDcVzzYcXMe_q2THt28fvzT7dqk5Bjybql6WEI')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-[48px]">trending_up</span>
+                    </div>
+                    <div
+                        class="absolute top-3 left-3 px-sm py-xs bg-white/90 backdrop-blur rounded-full font-label-caps text-[10px] text-primary">
+                        STRATEGY</div>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                    Investment Strategies</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-sm">Risk management and portfolio
+                    diversification techniques for enterprise-level assets in volatile markets.</p>
+            </div>
+            <!-- Article 3 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-video rounded-xl overflow-hidden mb-md border border-outline-variant relative">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="A futuristic UI interface displaying automated budgeting cycles, with elegant circular progress rings in shades of teal and cyan. Minimalist, clean workspace background, soft ambient lighting. High-quality digital art representing financial automation and mathematical precision. Sleek and high-tech feel."
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXeDMNnh5Zv_iaQUFtaXn5qWJ4HQdvKFphEbSFJhYV4F2DrY_fj5EY8oOuskjxUbhcJgVvT4-AwuzxEZkfm5-KCMZpmWIdW9Xzxf_alVaNKgM1yNUd8kOnbmlpnQdGWIhmY7F820ZAtTaw7vIVFP0PGocRtguGg0O7x2mJO01nEa5WrJiQg1E4jLetG_vXIZmcjPeXhpV5cOrDYk2UkQqRsvVBKNp8G8ySsvmFZxfKMCRMqGKKcXz3G2klJZFQQ4HVdIpdwpsUE1g')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-[48px]">smart_toy</span>
+                    </div>
+                    <div
+                        class="absolute top-3 left-3 px-sm py-xs bg-white/90 backdrop-blur rounded-full font-label-caps text-[10px] text-primary">
+                        TUTORIAL</div>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                    Automated Budgeting</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-sm">Master the Fiscal Precision AI to
+                    automate your monthly reconciliations and spending thresholds.</p>
+            </div>
+        </div>
+    </section>
+</main>
+<app-footer></app-footer>

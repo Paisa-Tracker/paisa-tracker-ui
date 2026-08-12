@@ -1,0 +1,151 @@
+<app-header></app-header>
+<main class="ml-64 pt-12 pb-xl min-h-screen">
+    <!-- Trust Header -->
+    <section class="mb-xl flex justify-between items-end">
+        <div>
+            <div class="flex items-center gap-sm text-secondary mb-xs">
+                <span class="material-symbols-outlined text-[32px]"
+                    style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                <span class="font-label-caps text-label-caps uppercase tracking-widest">Trust Infrastructure</span>
+            </div>
+            <h2 class="font-display-lg text-display-lg text-primary">Secure &amp; Private</h2>
+            <p class="text-on-surface-variant mt-xs max-w-2xl">Enterprise-grade protection for your global financial
+                operations. Fiscal Precision employs rigorous security protocols to ensure your data remains sovereign
+                and protected.</p>
+        </div>
+    </section>
+    <div class="grid grid-cols-12 gap-lg">
+        <!-- Hero Security Feature: Encryption -->
+        <div class="col-span-12 lg:col-span-8">
+            <div
+                class="relative overflow-hidden rounded-xl bg-primary-container text-on-primary p-xl shadow-lg h-full flex flex-col justify-between">
+                <!-- Atmospheric Background Overlay -->
+                <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+
+                </div>
+                <div class="relative z-10">
+                    <div class="bg-secondary-container/20 w-fit p-sm rounded-lg mb-lg">
+                        <span class="material-symbols-outlined text-secondary-fixed text-[40px]">lock</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md mb-md">Bank-grade 256-bit encryption</h3>
+                    <p class="text-on-primary-container text-body-lg max-w-xl leading-relaxed">
+                        Your data is encrypted at rest and in transit using industry-standard AES-256 protocols. We
+                        utilize Hardware Security Modules (HSMs) to manage cryptographic keys, ensuring that not even
+                        our internal systems can access your raw transaction data without authorization.
+                    </p>
+                </div>
+                <div class="relative z-10 mt-xl flex gap-lg">
+                    <div class="flex flex-col">
+                        <span class="text-secondary-fixed font-label-mono text-label-mono">ALGORITHM</span>
+                        <span class="font-body-md font-bold">AES-256-GCM</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-secondary-fixed font-label-mono text-label-mono">PROTOCOL</span>
+                        <span class="font-body-md font-bold">TLS 1.3 / Perfect Forward Secrecy</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-secondary-fixed font-label-mono text-label-mono">CERTIFICATION</span>
+                        <span class="font-body-md font-bold">SOC2 Type II Compliant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Data Privacy Focus (Bento Item) -->
+        <div class="col-span-12 lg:col-span-4 glass-card rounded-xl p-lg">
+            <div class="flex items-center gap-md mb-lg">
+                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-secondary">visibility_off</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm">Data Privacy Focus</h4>
+            </div>
+            <p class="text-on-surface-variant text-body-md mb-lg">We practice data minimization. Your personal
+                identifiers are anonymized in our reporting engines, ensuring business intelligence without privacy
+                leakage.</p>
+            <ul class="space-y-sm">
+                <li class="flex items-center gap-sm text-body-md">
+                    <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                    GDPR &amp; CCPA Compliant
+                </li>
+                <li class="flex items-center gap-sm text-body-md">
+                    <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                    Zero-Knowledge Architecture
+                </li>
+                <li class="flex items-center gap-sm text-body-md">
+                    <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                    No Data Selling Guarantee
+                </li>
+            </ul>
+        </div>
+        <!-- Recent Security Logs -->
+        <div class="col-span-12 lg:col-span-8 glass-card rounded-xl overflow-hidden">
+            <div
+                class="px-lg py-md border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+                <h4 class="font-headline-sm text-headline-sm">Recent Security Logs</h4>
+                <a class="text-secondary font-bold text-body-md hover:underline" href="#">View All</a>
+            </div>
+            <div class="divide-y divide-outline-variant">
+                <div
+                    class="p-lg flex items-center justify-between hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+                    <div class="flex items-center gap-lg">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center group-hover:bg-secondary/10 transition-colors">
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary">login</span>
+                        </div>
+                        <div>
+                            <p class="font-body-md font-bold">New Login Detected</p>
+                            <p class="font-label-mono text-label-mono text-on-surface-variant">IP: 192.168.1.45 •
+                                London, UK</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="font-body-md">2 minutes ago</p>
+                        <span
+                            class="px-sm py-xs bg-secondary/10 text-secondary rounded text-[10px] font-bold uppercase tracking-tighter">Verified</span>
+                    </div>
+                </div>
+                <div
+                    class="p-lg flex items-center justify-between hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+                    <div class="flex items-center gap-lg">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center group-hover:bg-secondary/10 transition-colors">
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary">history</span>
+                        </div>
+                        <div>
+                            <p class="font-body-md font-bold">API Key Rotated</p>
+                            <p class="font-label-mono text-label-mono text-on-surface-variant">System-wide credential
+                                update</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="font-body-md">1 hour ago</p>
+                        <span
+                            class="px-sm py-xs bg-secondary/10 text-secondary rounded text-[10px] font-bold uppercase tracking-tighter">Automatic</span>
+                    </div>
+                </div>
+                <div
+                    class="p-lg flex items-center justify-between hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+                    <div class="flex items-center gap-lg">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center group-hover:bg-secondary/10 transition-colors">
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary">shield_person</span>
+                        </div>
+                        <div>
+                            <p class="font-body-md font-bold">Permission Change</p>
+                            <p class="font-label-mono text-label-mono text-on-surface-variant">Sarah Jenkins (Admin)
+                                updated 'Editor' role</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="font-body-md">3 hours ago</p>
+                        <span
+                            class="px-sm py-xs bg-secondary/10 text-secondary rounded text-[10px] font-bold uppercase tracking-tighter">Manual</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

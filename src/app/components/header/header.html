@@ -1,20 +1,23 @@
 <!-- TopAppBar -->
 <header class="w-full sticky top-0 z-50 bg-surface/80 backdrop-blur-md shadow-sm">
     <nav class="flex justify-between items-center max-w-[1280px] mx-auto px-margin-desktop h-20">
-        <div class="flex items-center gap-sm cursor-pointer active:scale-95 duration-200" [routerLink]="['']">
+        <div class="flex items-center gap-sm cursor-pointer active:scale-95 duration-200" [routerLink]="['/']">
             <span class="material-symbols-outlined text-primary" style="font-size: 32px;">account_balance_wallet</span>
             <span class="text-headline-md font-headline-md font-bold text-primary">Paisa Tracker</span>
         </div>
         <div class="hidden md:flex items-center gap-xl">
             <a class="text-on-surface-variant hover:text-secondary transition-colors font-medium"
-                [routerLink]="['']">Features</a>
-            <a class="text-on-surface-variant hover:text-secondary transition-colors font-medium" href="#">Security</a>
-            <a class="text-on-surface-variant hover:text-secondary transition-colors font-medium" href="#">Pricing</a>
-            <a class="text-on-surface-variant hover:text-secondary transition-colors font-medium" href="#">Support</a>
+                [routerLink]="['/']" >Features</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors font-medium"
+                [routerLink]="['/security']" >Security</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors font-medium"
+                [routerLink]="['/pricing']" >Pricing</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors font-medium" 
+                [routerLink]="['/support']" >Support</a>
         </div>
         @if (isLoggedIn$ | async) {
         <div>
-            <button [routerLink]="['/dashboard']"
+            <button [routerLink]="['/dashboard/content']"
             class="bg-secondary mr-3 text-on-primary px-3 py-1 rounded-lg hover:opacity-90 transition-opacity active:scale-95 duration-200">
             Dashboard
         </button>

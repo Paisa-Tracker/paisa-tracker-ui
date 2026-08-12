@@ -15,7 +15,7 @@ export class LoanExpenseService {
   ) { }
 
   addLoanExpense(loanExpense: LoanExpense): Observable<any> {
-    return this.http.post(this.API_BASE_URL+'/loan-expense/add-loan-expense', loanExpense, {responseType: 'text'}).
+    return this.http.post(this.API_BASE_URL+'/loan-expense/add-loan-expense', loanExpense).
     pipe(
       tap((data)=> console.log('Data Fetched: ' + JSON.stringify(data))),
       catchError(this.handleError)

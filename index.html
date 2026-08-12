@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Viraj - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@600&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
+
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .glass-card {
+            background: rgba(23, 31, 51, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(70, 69, 84, 0.5);
+        }
+
+        .timeline-line {
+            background: linear-gradient(to bottom, transparent, #464554 10%, #464554 90%, transparent);
+        }
+
+        .skill-chip {
+            background: #171f33;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .skill-chip:hover {
+            background: #2d3449;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px -5px rgba(128, 131, 255, 0.3);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            background-color: #0b1326;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(192, 193, 255, 0.08) 0%, transparent 70%);
+        }
+
+        .glass-card {
+            background: rgba(23, 31, 51, 0.4);
+            backdrop-filter: blur(12px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0b1326;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #2d3449;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #464554;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#2d3133",
+                        "on-error": "#690005",
+                        "on-background": "#dae2fd",
+                        "tertiary": "#c4c7c9",
+                        "primary": "#c0c1ff",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "outline": "#908fa0",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#2d3449",
+                        "on-surface": "#dae2fd",
+                        "surface-container-lowest": "#060e20",
+                        "surface-container": "#171f33",
+                        "inverse-surface": "#dae2fd",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "surface-container-low": "#131b2e",
+                        "surface-container-highest": "#2d3449",
+                        "on-primary-fixed": "#07006c",
+                        "on-primary": "#1000a9",
+                        "background": "#0b1326",
+                        "tertiary-container": "#8e9193",
+                        "on-primary-container": "#0d0096",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#00311f",
+                        "surface-bright": "#31394d",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "surface-tint": "#c0c1ff",
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#494bd6",
+                        "primary-fixed": "#e1e0ff",
+                        "outline-variant": "#464554",
+                        "secondary": "#4edea3",
+                        "on-surface-variant": "#c7c4d7",
+                        "secondary-fixed": "#6ffbbe",
+                        "tertiary-fixed": "#e0e3e5",
+                        "secondary-fixed-dim": "#4edea3",
+                        "surface-dim": "#0b1326",
+                        "surface-container-high": "#222a3d",
+                        "secondary-container": "#00a572",
+                        "on-tertiary-fixed": "#191c1e",
+                        "inverse-on-surface": "#283044",
+                        "on-tertiary-container": "#272a2c",
+                        "surface": "#0b1326",
+                        "primary-container": "#8083ff",
+                        "on-secondary-fixed": "#002113",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-secondary": "#003824"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "48px",
+                        "section-gap": "80px",
+                        "inner-padding": "16px",
+                        "stack-sm": "12px",
+                        "container-margin": "20px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "display": ["Manrope"],
+                        "button": ["Inter"],
+                        "headline-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+    <!-- Top Navigation Bar -->
+    <header
+        class="fixed top-0 w-full flex justify-between items-center px-container-margin h-16 z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary"
+                style="font-variation-settings: 'FILL' 1;">terminal</span>
+            <span class="font-display text-body-lg font-extrabold text-on-background">VH</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-primary font-label-caps text-label-caps hover:opacity-80 transition-opacity"
+                href="#home">Home</a>
+            <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors"
+                href="#projects">Projects</a>
+            <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors"
+                href="#experience">Experience</a>
+            <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors"
+                href="#about-me">About</a>
+        </nav>
+        <a
+            href="tel:+917507507535"
+            class="bg-primary text-on-primary px-6 py-2 rounded-xl font-button text-button hover:opacity-80 transition-opacity active:scale-95">
+            Contact
+    </a>
+    </header>
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section id="home"
+            class="relative min-h-[570px] flex flex-col pt-24 px-container-margin overflow-hidden hero-gradient">
+            <div class="mx-auto text-center">
+                <p class="font-label-caps text-label-caps text-primary mb-stack-sm tracking-[0.2em]">AVAILABLE FOR NEW
+                    OPPORTUNITIES</p>
+                <h1 class="font-display text-display mb-stack-md leading-tight">
+                    Hi, I'm Viraj Holmukhe<br />
+                    <span class="text-primary">Building digital experiences that matter</span>
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl mx-auto">
+                    Full-stack developer with 4+ YoE specializing in architectural precision and high-performance user
+                    interfaces
+                    for modern web applications.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-button text-button inline-flex items-center justify-center gap-2 hover:shadow-[0_0_24px_rgba(192,193,255,0.4)] transition-all"
+                        href="#projects">
+                        View Projects
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                    <a class="border border-outline-variant text-on-background px-8 py-4 rounded-xl font-button text-button inline-flex items-center justify-center gap-2 hover:bg-surface-variant transition-colors"
+                        href="#">
+                        Download CV
+                        <span class="material-symbols-outlined">download</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Background Decorative Element -->
+            <div
+                class="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none">
+            </div>
+        </section>
+        <!-- Skills at a Glance -->
+        <section class="py-section-gap px-container-margin" id="skills">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="space-y-2">
+                    <span class="font-label-caps text-label-caps text-primary">CAPABILITIES</span>
+                    <h2 class="font-headline-lg text-headline-lg text-on-background">Technical Expertise</h2>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                    A comprehensive stack focused on scalability, performance, and maintainable architecture.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+                <div class="glass-card p-stack-md rounded-xl space-y-stack-md">
+                    <div class="flex items-center gap-3 text-secondary">
+                        <span class="material-symbols-outlined">layers</span>
+                        <h3 class="font-headline-md text-headline-md text-on-background">Frontend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">React
+                            / Next.js</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">TypeScript</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">Tailwind
+                            CSS</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">Three.js</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">Redux
+                            Toolkit</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">Framer
+                            Motion</span>
+                    </div>
+                </div>
+                <div class="glass-card p-stack-md rounded-xl space-y-stack-md">
+                    <div class="flex items-center gap-3 text-primary">
+                        <span class="material-symbols-outlined">database</span>
+                        <h3 class="font-headline-md text-headline-md text-on-background">Backend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">Node.js</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">PostgreSQL</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">GraphQL</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">Redis</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">Python</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">Go</span>
+                    </div>
+                </div>
+                <div class="glass-card p-stack-md rounded-xl space-y-stack-md">
+                    <div class="flex items-center gap-3 text-tertiary">
+                        <span class="material-symbols-outlined">settings_input_component</span>
+                        <h3 class="font-headline-md text-headline-md text-on-background">Tools &amp; Ops</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">Docker
+                            / K8s</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">AWS
+                            (S3, EC2)</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">CI/CD
+                            Pipelines</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">Git
+                            / GitHub</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">Figma</span>
+                        <span
+                            class="skill-chip px-3 py-1.5 rounded-lg font-label-caps text-label-caps text-on-surface-variant">Postman</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Recent Work -->
+        <section class="py-section-gap px-container-margin bg-surface-container-low/30" id="projects">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex justify-between items-end mb-stack-lg">
+                    <div class="flex flex-col">
+                        <span class="font-label-caps text-label-caps text-primary mb-2">PORTFOLIO</span>
+                        <h2 class="font-headline-lg text-headline-lg">Recent Work</h2>
+                    </div>
+                    <a class="text-primary font-button text-button flex items-center gap-2 group" href="#all-projects">
+                        See all projects
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+                <!-- Featured Project Card -->
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-12 gap-8 glass-card border border-outline-variant rounded-full overflow-hidden group">
+                    <div class="lg:col-span-7 relative h-64 lg:h-auto overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-background/40 to-transparent z-10"></div>
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="A sophisticated data analytics dashboard interface displayed on a sleek high-resolution monitor. The UI features dark-mode aesthetics with vibrant indigo and emerald green line charts, circular progress indicators, and clean tabular data. The environment is a minimalist, dimly lit home office with soft blue ambient lighting reflecting off glass surfaces. The overall mood is high-tech, professional, and precise."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZxU329E55WBlWfVqccmAVNK35R5XooZ011IJgPjgGzhOVjvmvLK_DjfnqqryzQifoV30lcDRTYmX14b8b8YxpnUkWmZuJmFZFPsI2M86xAyAenP-cXDhHff-pkZFFXSeM-XZynC2tk-SUyLAAWtJZsQ2u-_nrOmktN74dpSApO0mhSkufV-K_bzYOT3VG6eonm0CP4LHRZAaTT8THnFFGVvfG0_plYaUCZdj74DWsDH_PtwiHM3KduSGARhD2s8DL4y96IQ7iig" />
+                    </div>
+                    <div class="lg:col-span-5 p-stack-md lg:p-stack-lg flex flex-col justify-center">
+                        <div class="flex gap-2 mb-stack-sm">
+                            <span
+                                class="bg-primary/20 text-primary px-3 py-1 rounded-full text-label-caps font-label-caps">CASE
+                                STUDY</span>
+                        </div>
+                        <h3 class="font-headline-lg text-headline-lg mb-stack-sm text-on-background">Nexus Analytics
+                            Dashboard</h3>
+                        <p class="text-on-surface-variant mb-stack-md font-body-md leading-relaxed">
+                            A comprehensive real-time data visualization platform built for financial analysts. Features
+                            custom D3.js integrations and high-concurrency WebSocket updates.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mb-stack-lg">
+                            <span
+                                class="text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant px-3 py-1 rounded">NEXT.JS</span>
+                            <span
+                                class="text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant px-3 py-1 rounded">TYPESCRIPT</span>
+                            <span
+                                class="text-on-surface-variant font-label-caps text-[10px] tracking-widest border border-outline-variant px-3 py-1 rounded">D3.JS</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <button
+                                class="bg-primary text-on-primary px-6 py-3 rounded-xl font-button text-button active:scale-95 transition-transform">View
+                                Project</button>
+                            <button
+                                class="text-on-background p-3 rounded-xl border border-outline-variant hover:bg-surface-variant active:scale-95 transition-all">
+                                <span class="material-symbols-outlined">open_in_new</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-section-gap px-container-margin max-w-7xl mx-auto " id="all-projects">
+            <!-- Project 1: Aether Platform -->
+            <div class="flex flex-col mb-stack-lg">
+                <h2 class="font-headline-lg text-headline-lg">All Projects</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-section-gap">
+
+
+                <article
+                    class="project-card group bg-surface-container rounded-xl overflow-hidden border border-outline-variant flex flex-col h-full cursor-pointer transition-all hover:border-primary/40 hover:shadow-[0_0_40px_rgba(192,193,255,0.05)]">
+                    <div class="aspect-video w-full overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent z-10"></div>
+                        <div class="project-image w-full h-full"
+                            data-alt="A futuristic, high-tech web dashboard interface called Aether Platform with glowing indigo data visualizations, 3D modular components, and dark slate textures. The scene is lit with cinematic neon indigo highlights against an obsidian background, emphasizing a clean architectural layout and professional data analytics aesthetic. The mood is sophisticated and bleeding-edge."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMtzeeT7JZKJw6W6tVXaQoIJBcAsbBPCvNOXdWcw0g5dhKb8kh91qlkdBopngYCMj_HFJcmvq6szrkFwfZXPE9s1f66P2f4tLEkR9FnTQZoGPL0Uv2R_W3OoVQv5LwcEql9N0XeVq_s0AiGAru7CBdFSvNfOiLpW0aW9O4hmedJ72vtRddMukHXpAk0CYju_lkN0aYyYe7bhfvMnGvHOzjh9Ojop6zk5z3lRs3ubx9w5EM09h4uXmRE0WS9PKoxMURTYzCDo99qko')">
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow gap-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-headline-md text-headline-md text-on-background">Aether Platform</h3>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors"
+                                data-icon="arrow_outward">arrow_outward</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">A high-performance
+                            analytics
+                            dashboard designed for real-time cloud infrastructure monitoring and predictive scaling.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span
+                                class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-lg font-label-caps text-[10px] uppercase tracking-wider">React</span>
+                            <span
+                                class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-lg font-label-caps text-[10px] uppercase tracking-wider">Node.js</span>
+                            <span
+                                class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-lg font-label-caps text-[10px] uppercase tracking-wider">WebGL</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 2: Lumina Mobile -->
+                <article
+                    class="project-card group bg-surface-container rounded-xl overflow-hidden border border-outline-variant flex flex-col h-full cursor-pointer transition-all hover:border-primary/40 hover:shadow-[0_0_40px_rgba(192,193,255,0.05)]">
+                    <div class="aspect-video w-full overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent z-10"></div>
+                        <div class="project-image w-full h-full"
+                            data-alt="A premium mobile application UI showcase for Lumina, featuring sleek iOS-style interactions and vibrant emerald green accents on a deep navy background. The screen displays an intricate map interface with custom markers and a smooth bottom sheet for task management. High-end lighting effects create depth and a tactile glassmorphic feel, emphasizing modern mobile design excellence."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHGtnoQ4M1T6uDJWUzy6zA5wZIPD6_7OktcgDdXWV3U6T6wPAu8ox058sFRrPUvOeWucNhpL-OLHqZLusHJs9tgzEkyQYilKa4WFX8wI6DaSeXgIVOvQK1l15ZLBi4ZKjn7WuH8l2TFdF47yd48WZsYFpFmeYxPEx-KpC1X9z2LMGOO4BXm2O-pIQfFtVgNMEtPh_nKQIZ43ScRPCoTjDVHpTc3BS5_k95mZwx0wdJ4NS1n6n1B76dhbwkPoyjWV9jmAtKEG-dsKo')">
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow gap-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-headline-md text-headline-md text-on-background">Lumina Mobile</h3>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors"
+                                data-icon="arrow_outward">arrow_outward</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">A cross-platform fitness
+                            companion
+                            app featuring advanced biometric tracking and interactive geospatial mapping for outdoor
+                            activities.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span
+                                class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-lg font-label-caps text-[10px] uppercase tracking-wider">SwiftUI</span>
+                            <span
+                                class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-lg font-label-caps text-[10px] uppercase tracking-wider">Firebase</span>
+                            <span
+                                class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-lg font-label-caps text-[10px] uppercase tracking-wider">MapBox</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 3: Brutalist.Web -->
+                <article
+                    class="project-card group bg-surface-container rounded-xl overflow-hidden border border-outline-variant flex flex-col h-full cursor-pointer transition-all hover:border-primary/40 hover:shadow-[0_0_40px_rgba(192,193,255,0.05)]">
+                    <div class="aspect-video w-full overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent z-10"></div>
+                        <div class="project-image w-full h-full"
+                            data-alt="An editorial-style web experience titled Brutalist Web, featuring bold oversized typography, sharp Swiss-style grid layouts, and asymmetric visual elements. The aesthetic uses high-contrast monochrome tones with strategic indigo highlights. The composition is dynamic, suggesting motion and architectural precision, with layered textures that evoke a sense of physical paper in a digital landscape."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNzkiHQSZlY3ZxlzODvranoYItWXlWNKg3g--fKQfmnbyqilmjGpbX5J9B5jBnxD1E-ffz3OouRMSbCv_q2pBRJpE-e4Sht3LG4ZNY9_dvAkAvXhradXJV-F-RWwNZVhj5-Dy9WlOVP4ypoefZxeGXa91BRQcWooTWS3A7uX0Sa4B3MfKoq1Hz0AhV-yGCYNjnnyBOjBSfie3EwmaVqk1Pcfg4UfMuM4j3eCfzvSPZDMG5cJmrsAdQa0wAU21PwiANts-xsfYsXY8')">
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow gap-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-headline-md text-headline-md text-on-background">Brutalist.Web</h3>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors"
+                                data-icon="arrow_outward">arrow_outward</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">An experimental editorial
+                            platform
+                            exploring neo-brutalist aesthetics through fluid motion design and asymmetric grids.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span
+                                class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-lg font-label-caps text-[10px] uppercase tracking-wider">Tailwind</span>
+                            <span
+                                class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-lg font-label-caps text-[10px] uppercase tracking-wider">Framer
+                                Motion</span>
+                            <span
+                                class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-lg font-label-caps text-[10px] uppercase tracking-wider">GSAP</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- Experience Mini Timeline (Secondary Section) -->
+        <section class="py-section-gap px-container-margin" id="experience">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-stack-lg">
+                    <span class="font-label-caps text-label-caps text-primary mb-2">CAREER PATH</span>
+                    <h2 class="font-headline-lg text-headline-lg">Experience</h2>
+                </div>
+                <div
+                    class="space-y-stack-md relative before:content-[''] before:absolute before:left-0 md:before:left-1/2 before:w-[1px] before:h-full before:bg-outline-variant">
+                    <div class="relative flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div class="md:w-5/12 text-left md:text-right">
+                            <span class="font-label-caps text-label-caps text-primary">2025 — 2026</span>
+                            <h3 class="font-headline-md text-headline-md mt-1">Senior Software Engineer</h3>
+                            <h5>CitiusTech Healthcare Pvt Ltd</h5>
+                            <p class="text-on-surface-variant font-body-md mt-2">
+                                Developed and enhanced a Service Sync application
+                                that enabled efficient coordination of healthcare services and
+                                provider management.
+                            </p>
+                        </div>
+                        <div
+                            class="absolute left-[-4.5px] md:left-1/2 md:-translate-x-1/2 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-background z-10">
+                        </div>
+                        <div class="md:w-5/12 hidden md:block"></div>
+                    </div>
+                    <div class="relative flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div class="md:w-5/12 hidden md:block"></div>
+                        <div
+                            class="absolute left-[-4.5px] md:left-1/2 md:-translate-x-1/2 w-2.5 h-2.5 rounded-full bg-outline ring-4 ring-background z-10">
+                        </div>
+                        <div class="md:w-5/12 text-left">
+                            <span class="font-label-caps text-label-caps text-on-surface-variant">2022 — 2025</span>
+                            <h3 class="font-headline-md text-headline-md mt-1">Senior Systems Engineer</h3>
+                            <h5>Infosys Ltd</h5>
+                            <p class="text-on-surface-variant font-body-md mt-2">
+                                Developed enterprise insurance applications
+                                that streamlined policy management, customer onboarding,
+                                claims processing, mortgage insurance workflows, and premium calculations
+                                for insurance providers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Education & Credentials Section -->
+        <section class="py-section-gap px-container-margin" id="about-me">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
+                <div class="lg:col-span-4">
+                <span class="font-label-caps text-label-caps text-primary">JOURNEY</span>
+                <h2 class="font-headline-lg text-headline-lg text-on-background mt-2 mb-6">Education &amp;
+                    <br />Credentials</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                    Foundational academic training combined with continuous professional certification in emerging
+                    technologies.
+                </p>
+            </div>
+            <div class="lg:col-span-8 relative pl-8">
+                <div class="absolute left-0 top-0 bottom-0 w-0.5 timeline-line"></div>
+                <div class="space-y-stack-lg">
+                    <!-- Education 1 -->
+                    <div class="relative">
+                        <div
+                            class="absolute -left-[37px] top-1.5 h-4 w-4 rounded-full border-2 border-primary bg-background z-10">
+                        </div>
+                        <div class="space-y-2">
+                            <span class="font-label-caps text-label-caps text-primary">2014 — 2018</span>
+                            <h4 class="font-headline-md text-headline-md text-on-background">B.Sc. in Computer Science
+                            </h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Stanford University • GPA
+                                3.9/4.0</p>
+                            <p class="text-sm text-outline max-w-lg italic">Focus on Distributed Systems and
+                                Human-Computer Interaction. Recipient of the Academic Excellence Award.</p>
+                        </div>
+                    </div>
+                    <!-- Education 2 -->
+                    <div class="relative">
+                        <div
+                            class="absolute -left-[37px] top-1.5 h-4 w-4 rounded-full border-2 border-outline-variant bg-background z-10">
+                        </div>
+                        <div class="space-y-2">
+                            <span class="font-label-caps text-label-caps text-on-surface-variant">2019</span>
+                            <h4 class="font-headline-md text-headline-md text-on-background">Advanced Cloud Architecture
+                            </h4>
+                            <p class="font-body-md text-body-md text-on-surface-variant">AWS Professional Certification
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Credentials Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div
+                            class="flex items-center gap-4 p-4 border border-outline-variant rounded-xl hover:border-primary/50 transition-colors bg-surface-container-low">
+                            <span class="material-symbols-outlined text-secondary text-3xl">workspace_premium</span>
+                            <div>
+                                <p class="font-label-caps text-[10px] uppercase text-outline">Credential ID: 9X2J-4L11
+                                </p>
+                                <p class="font-button text-button text-on-surface">Meta Front-End Developer</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-4 p-4 border border-outline-variant rounded-xl hover:border-primary/50 transition-colors bg-surface-container-low">
+                            <span class="material-symbols-outlined text-primary text-3xl">school</span>
+                            <div>
+                                <p class="font-label-caps text-[10px] uppercase text-outline">Credential ID: CRT-552</p>
+                                <p class="font-button text-button text-on-surface">Google UX Design Professional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container py-stack-lg px-container-margin border-t border-outline-variant">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg mb-stack-sm">Let's build something exceptional.</h2>
+                    <p class="text-on-surface-variant font-body-lg">Currently available for select freelance projects
+                        and full-time roles.</p>
+                </div>
+                <div class="flex flex-col md:items-end gap-6">
+                    <a class="text-headline-md font-headline-md text-primary hover:underline transition-all"
+                        href="mailto:virajholmukhe@gmail.com">virajholmukhe@gmail.com</a>
+                    <div class="flex gap-4">
+                        <a class="w-12 h-12 flex items-center justify-center rounded-full border border-outline-variant hover:bg-primary hover:text-on-primary transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">link</span>
+                        </a>
+                        <a class="w-12 h-12 flex items-center justify-center rounded-full border border-outline-variant hover:bg-primary hover:text-on-primary transition-all"
+                            href="mailto:virajholmukhe@gmail.com">
+                            <span class="material-symbols-outlined">alternate_email</span>
+                        </a>
+                        <a class="w-12 h-12 flex items-center justify-center rounded-full border border-outline-variant hover:bg-primary hover:text-on-primary transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined">code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="mt-20 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant font-label-caps text-[10px] tracking-widest uppercase">
+                <p>© 2026 Viraj - PORTFOLIO. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bottom Nav for Mobile (as per shared components rules) -->
+    <nav
+        class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 pb-safe bg-surface border-t border-outline-variant">
+        <a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-3 py-1 active:scale-90 transition-transform"
+            href="#">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+            <span class="font-label-caps text-[10px]">Home</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 transition-transform"
+            href="#projects">
+            <span class="material-symbols-outlined">folder_special</span>
+            <span class="font-label-caps text-[10px]">Projects</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 transition-transform"
+            href="#experience">
+            <span class="material-symbols-outlined">work_history</span>
+            <span class="font-label-caps text-[10px]">Experience</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-90 transition-transform"
+            href="#about">
+            <span class="material-symbols-outlined">person</span>
+            <span class="font-label-caps text-[10px]">About</span>
+        </a>
+    </nav>
+    <script>
+        // Micro-interactions for skill chips
+        document.querySelectorAll('.skill-chip').forEach(chip => {
+            chip.addEventListener('mouseenter', () => {
+                const colors = ['#8083ff', '#4edea3', '#c4c7c9'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                chip.style.borderColor = randomColor;
+                chip.style.color = randomColor;
+            });
+            chip.addEventListener('mouseleave', () => {
+                chip.style.borderColor = 'transparent';
+                chip.style.color = '';
+            });
+        });
+
+        // Simple Micro-interactions
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll reveal logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+    </script>
+</body>
+
+</html>
