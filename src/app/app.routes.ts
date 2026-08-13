@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { SessionComponent } from './components/session/session.component';
 import { Dashboard } from './components/dashboard/dashboard';
 import { ExpenseTab } from './components/expense-tab/expense-tab';
 import { DashboardContent } from './components/dashboard-content/dashboard-content';
@@ -19,8 +18,8 @@ export const routes: Routes = [
     { path: 'security', component: TabSecurity},
     { path: 'pricing', component: TabPricing},
     { path: 'support', component: TabSupport},
-    { path: 'register' , component: SessionComponent, data: {showRegister: true} },
-    { path: 'signin' , component: SessionComponent, data: {showRegister: false} },
+    { path: 'register', loadComponent: () => import('./components/session/register-user/register-user').then(m => m.RegisterUser) },
+    { path: 'login', loadComponent: () => import('./components/session/login-user/login-user').then(m => m.LoginUser) },
     { path: 'dashboard', component: Dashboard, children: [
         { path: 'content', component: DashboardContent},
         { path: 'expenses', component: ExpenseTab},

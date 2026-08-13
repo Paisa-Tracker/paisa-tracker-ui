@@ -1,0 +1,59 @@
+<div class="login-page">
+  <div class="content login-card">
+    <div>
+      <div class="brand">
+        <img src="images/pt logo.svg" width="30" alt="Paisa Tracker logo" />
+        <span>Paisa Tracker</span>
+      </div>
+
+      <div class="header">
+        <h1>Welcome back</h1>
+        <p>Sign in to manage your personal expenses.</p>
+      </div>
+
+      <div class="login-link">
+        New to Paisa Tracker?
+        <a routerLink="/register">Create an account</a>
+      </div>
+    </div>
+
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="submit()">
+      <div class="step-heading">
+        <h2>Sign in</h2>
+        <p>Enter your account details to continue.</p>
+      </div>
+
+      @if (errorMessage()) {
+        <div class="form-error" role="alert">{{ errorMessage() }}</div>
+      }
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="email" type="email" autocomplete="email" placeholder="you@example.com" formControlName="email" />
+
+          @if (hasError('email', 'required')) {
+            <span class="error">Email is required.</span>
+          } @else if (hasError('email', 'email')) {
+            <span class="error">Enter a valid email address.</span>
+          }
+        </div>
+
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" placeholder="Enter your password" formControlName="password" />
+
+          @if (hasError('password', 'required')) {
+            <span class="error">Password is required.</span>
+          }
+        </div>
+      </div>
+
+      <div class="navigation">
+        <button type="submit" class="primary-button" [disabled]="isSubmitting()">
+          {{ isSubmitting() ? 'Signing in...' : 'Sign in' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

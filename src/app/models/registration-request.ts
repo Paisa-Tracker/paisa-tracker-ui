@@ -2,7 +2,8 @@
 /* eslint-disable */
 export interface RegistrationRequest {
   email: string;
-  fullname: string;
+  firstName: string;
+  lastName: string;
   password: string;
-  username: string;
+  phone: string;
 }

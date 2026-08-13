@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  API_BASE_URL: string = 'http://localhost:8000';
+  API_BASE_URL: string = 'http://localhost:8080';
 
   constructor(
     private http: HttpClient,

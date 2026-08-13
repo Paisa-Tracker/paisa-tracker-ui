@@ -1,0 +1,330 @@
+:host {
+  display: block;
+}
+
+.registration-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  background: #f8f9fa;
+  font-family:
+    Inter,
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+.registration-card {
+  width: 100%;
+  background: #ffffff;
+  margin: 0 90px;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.content{
+  display: grid;
+  grid-template-columns: 39% 51%;
+  gap: 100px;
+}
+
+
+/* Brand */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 36px;
+}
+
+.brand-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #111827;
+  color: white;
+  font-weight: 700;
+}
+
+
+/* Header */
+
+.header {
+  margin-bottom: 28px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* Progress */
+
+.progress-container {
+  margin-bottom: 20px;
+}
+
+.progress-track {
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #2563eb;
+  transition: width 250ms ease;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.steps span {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 11px;
+  background: #e5e7eb;
+  color: #6b7280;
+}
+
+.steps span.active {
+  background: #111827;
+  color: white;
+}
+
+
+/* Step */
+
+.step-heading {
+  margin-bottom: 28px;
+}
+
+.step-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.step-heading h2 {
+  margin: 0 0 7px;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.step-heading p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* Form */
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-field input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 46px;
+  padding: 0 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: white;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.form-field input::placeholder {
+  color: #9ca3af;
+}
+
+.form-field input:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
+}
+
+
+/* Phone */
+
+.phone-input {
+  display: flex;
+}
+
+.country-code {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
+  background: #f9fafb;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.phone-input input {
+  border-radius: 0 8px 8px 0;
+}
+
+
+/* Errors */
+
+.error {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #dc2626;
+}
+
+
+/* Security */
+
+.security-hint {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* Navigation */
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.back-button,
+.primary-button {
+  height: 44px;
+  border-radius: 8px;
+  padding: 0 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.back-button {
+  border: none;
+  background: transparent;
+  color: #4b5563;
+}
+
+.back-button:hover {
+  background: #f3f4f6;
+}
+
+.primary-button {
+  border: none;
+  background: #111827;
+  color: white;
+  min-width: 110px;
+  transition: background 150ms ease;
+}
+
+.primary-button:hover {
+  background: #374151;
+}
+
+
+/* Login */
+
+.login-link {
+  margin-top: 28px;
+  text-align: start;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.login-link a {
+  margin-left: 4px;
+  color: #111827;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .registration-page {
+    padding: 16px;
+    align-items: flex-start;
+  }
+
+  .registration-card {
+    margin-top: 20px;
+    padding: 28px 22px;
+    box-shadow: none;
+    border-radius: 12px;
+  }
+
+  .header h1 {
+    font-size: 25px;
+  }
+}

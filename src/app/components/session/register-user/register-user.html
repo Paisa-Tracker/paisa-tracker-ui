@@ -1,0 +1,350 @@
+<div class="registration-page">
+
+    <div class="content registration-card">
+        <div>
+            <!-- Logo -->
+            <div class="brand">
+                <div class=""><img src="images/pt logo.svg" width="30"></div>
+                <span>Paisa Tracker</span>
+            </div>
+
+            <!-- Header -->
+            <div class="header">
+                <h1>Create your account</h1>
+                <p>Get started with your personal expense tracker.</p>
+            </div>
+
+            <div class="login-link">Already have an account?
+                <a routerLink="/login">Sign in</a>
+            </div>
+        </div>
+
+        <div>
+            @if (currentStep()) {
+                <div>
+                <span class="step-label">
+                    STEP {{ currentStep() }} of 3
+                </span>
+            </div>
+            }
+            <!-- Progress -->
+            <div class="progress-container">
+
+                <div class="progress-track">
+                    <div class="progress-bar" [style.width]="progress()">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- ============================= -->
+            <!-- STEP 1 -->
+            <!-- ============================= -->
+
+            @if (currentStep() === 1) {
+
+            <section>
+
+                <div class="step-heading">
+
+                    <h2>Personal details</h2>
+
+                    <p>
+                        Let's start with your name.
+                    </p>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+
+                        <label for="firstName">
+                            First name
+                        </label>
+
+                        <input id="firstName" type="text" autocomplete="given-name" placeholder="Enter your first name"
+                            [formControl]="registrationForm.controls.personal.controls.firstName" />
+
+                        @if (
+                        hasError(
+                        registrationForm.controls.personal.controls.firstName,
+                        'required'
+                        )
+                        ) {
+                        <span class="error">
+                            First name is required.
+                        </span>
+                        }
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="lastName">
+                            Last name
+                        </label>
+
+                        <input id="lastName" type="text" autocomplete="family-name" placeholder="Enter your last name"
+                            [formControl]="registrationForm.controls.personal.controls.lastName" />
+
+                        @if (
+                        hasError(
+                        registrationForm.controls.personal.controls.lastName,
+                        'required'
+                        )
+                        ) {
+                        <span class="error">
+                            Last name is required.
+                        </span>
+                        }
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            }
+
+
+            <!-- ============================= -->
+            <!-- STEP 2 -->
+            <!-- ============================= -->
+
+            @if (currentStep() === 2) {
+
+            <section>
+
+                <div class="step-heading">
+
+                    <h2>Contact information</h2>
+
+                    <p>
+                        We'll use this information to keep your account secure.
+                    </p>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input id="email" type="email" autocomplete="email" placeholder="you@example.com"
+                            [formControl]="registrationForm.controls.contact.controls.email" />
+
+                        @if (
+                        hasError(
+                        registrationForm.controls.contact.controls.email,
+                        'required'
+                        )
+                        ) {
+                        <span class="error">
+                            Email is required.
+                        </span>
+                        }
+
+                        @if (
+                        hasError(
+                        registrationForm.controls.contact.controls.email,
+                        'email'
+                        )
+                        ) {
+                        <span class="error">
+                            Enter a valid email address.
+                        </span>
+                        }
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <div class="phone-input">
+
+                            <span class="country-code">
+                                +91
+                            </span>
+
+                            <input id="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="10"
+                                placeholder="9876543210"
+                                [formControl]="registrationForm.controls.contact.controls.phone" />
+
+                        </div>
+
+                        @if (
+                        hasError(
+                        registrationForm.controls.contact.controls.phone,
+                        'required'
+                        )
+                        ) {
+                        <span class="error">
+                            Phone number is required.
+                        </span>
+                        }
+
+                        @if (
+                        hasError(
+                        registrationForm.controls.contact.controls.phone,
+                        'pattern'
+                        )
+                        ) {
+                        <span class="error">
+                            Enter a valid 10-digit phone number.
+                        </span>
+                        }
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            }
+
+
+            <!-- ============================= -->
+            <!-- STEP 3 -->
+            <!-- ============================= -->
+
+            @if (currentStep() === 3) {
+
+            <section>
+
+                <div class="step-heading">
+
+                    <h2>Create a password</h2>
+
+                    <p>
+                        Choose a strong password to protect your account.
+                    </p>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input id="password" type="password" autocomplete="new-password" placeholder="Create a password"
+                            [formControl]="registrationForm.controls.security.controls.password" />
+
+                        @if (
+                        hasError(
+                        registrationForm.controls.security.controls.password,
+                        'required'
+                        )
+                        ) {
+                        <span class="error">
+                            Password is required.
+                        </span>
+                        }
+
+                        @if (
+                        hasError(
+                        registrationForm.controls.security.controls.password,
+                        'minlength'
+                        )
+                        ) {
+                        <span class="error">
+                            Password must contain at least 8 characters.
+                        </span>
+                        }
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="confirmPassword">
+                            Confirm password
+                        </label>
+
+                        <input id="confirmPassword" type="password" autocomplete="new-password"
+                            placeholder="Confirm your password"
+                            [formControl]="registrationForm.controls.security.controls.confirmPassword" />
+
+                        @if (
+                        registrationForm.controls.security.hasError(
+                        'passwordMismatch'
+                        ) &&
+                        registrationForm.controls.security.controls.confirmPassword.touched
+                        ) {
+                        <span class="error">
+                            Passwords do not match.
+                        </span>
+                        }
+
+                    </div>
+
+                </div>
+
+
+                <div class="security-hint">
+                    <span>✓</span>
+                    Use at least 8 characters with a mix of letters and numbers.
+                </div>
+
+            </section>
+
+            }
+
+
+            <!-- Navigation -->
+
+            <div class="navigation">
+
+                @if (currentStep() > 1) {
+
+                <button type="button" class="back-button" (click)="back()">
+
+                    Back
+
+                </button>
+
+                } @else {
+
+                <div></div>
+
+                }
+
+
+                @if (currentStep() < 3) { <button type="button" class="primary-button" (click)="next()">
+
+                    Next
+
+                    <span>→</span>
+
+                    </button>
+
+                    } @else {
+
+                    <button type="button" class="primary-button" (click)="submit()">
+
+                        Create account
+
+                    </button>
+
+                    }
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</div>
